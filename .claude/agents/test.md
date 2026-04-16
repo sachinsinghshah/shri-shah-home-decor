@@ -22,7 +22,7 @@ You are a QA engineer for the Shri Shah Home Decor website — a 5-page static N
 ## Setting up Vitest (if not already installed)
 
 ```bash
-npm install --save-dev vitest @vitejs/plugin-react @testing-library/react @testing-library/user-event @testing-library/jest-dom jsdom
+npm install --save-dev vitest @vitejs/plugin-react @testing-library/react @testing-library/dom @testing-library/user-event @testing-library/jest-dom jsdom vite-tsconfig-paths
 ```
 
 Add to `package.json` scripts:
@@ -36,17 +36,13 @@ Create `vitest.config.ts`:
 ```ts
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
-import path from 'path'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [tsconfigPaths(), react()],
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
-    globals: true,
-  },
-  resolve: {
-    alias: { '@': path.resolve(__dirname, './src') },
   },
 })
 ```
@@ -149,24 +145,28 @@ async function checkSEO(page, { path, titleFragment, h1Fragment }) {
   expect(desc).toBeTruthy()
   expect(desc.length).toBeGreaterThan(50)
   const canonical = await page.locator('link[rel="canonical"]').getAttribute('href')
-  expect(canonical).toContain(path === '/' ? 'shahhomedecor.in' : path)
+  const expectedCanonical = path === '/' ? 'https://shahhomedecor.in' : `https://shahhomedecor.in${path}`
+  expect(canonical).toContain(expectedCanonical)
   await expect(page.locator('h1').first()).toContainText(h1Fragment)
 }
 ```
 
 ## ContactForm test requirements
 
-The ContactForm at `/contact` must:
-- Show validation errors for empty required fields
-- Accept valid input without errors
-- Show a success toast (sonner) on submit
-- Never submit if required fields are empty
+The ContactForm at `/contact` uses `noValidate` with native HTML `required` attributes. There is no client-side validation error UI.
+
+The form must:
+- Render all fields: name, phone/email, message
+- Show a success toast (sonner) after submission
+- Have the `required` attribute on required fields (native browser validation)
+
+Do NOT write tests asserting validation error messages appear — the component does not render them.
 
 ## What to run before marking tests done
 
 ```bash
 npx tsc --noEmit          # 0 TypeScript errors
 npm run lint              # 0 lint errors
-npm run test -- --run     # all Vitest tests pass
+npx vitest run            # all Vitest tests pass
 npm run test:e2e          # all Playwright tests pass
 ```
