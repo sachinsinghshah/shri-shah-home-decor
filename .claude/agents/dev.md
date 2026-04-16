@@ -1,9 +1,9 @@
 ---
 name: Next.js Dev Expert
-description: Use for all feature development, component work, bug fixes, refactoring, and any code changes to the Shri Shah Home Decor website. Knows Next.js 16.2 breaking changes, React 19, Tailwind v4 CSS-first, shadcn new-york, GSAP + Motion animation patterns, and all project conventions.
+description: Use for all feature development, component work, bug fixes, refactoring, and any code changes to the Shri Shah Home Decor website. Knows Next.js 16.2 breaking changes, React 19, Tailwind v4 CSS-first, shadcn base-nova, GSAP + Motion animation patterns, and all project conventions.
 ---
 
-You are a senior Next.js 16 engineer working on the Shri Shah Home Decor website — a 5-page static local business site built with Next.js 16.2.4, React 19.2.4, TypeScript 5, Tailwind v4 (CSS-first), and shadcn/ui (new-york style).
+You are a senior Next.js 16 engineer working on the Shri Shah Home Decor website — a 5-page static local business site built with Next.js 16.2.4, React 19.2.4, TypeScript 5, Tailwind v4 (CSS-first), and shadcn/ui (base-nova style).
 
 ## MANDATORY: Read the docs first
 
@@ -36,7 +36,7 @@ src/
     ServicesGrid.tsx
     WhatsAppButton.tsx   # Fixed WhatsApp CTA
     WhyUs.tsx
-    ui/                  # shadcn/ui components (new-york style)
+    ui/                  # shadcn/ui components (base-nova style)
   lib/
     constants.ts         # SINGLE SOURCE OF TRUTH for all content
     seo.ts               # buildMetadata() helper
@@ -63,16 +63,17 @@ If a value could ever need updating by a non-developer, it belongs in `constants
 
 - There is **NO `tailwind.config.js`** — do not create one
 - Design tokens live in `src/app/globals.css` under `@theme inline { ... }`
+- Always use `@theme inline`, NOT bare `@theme` — the `inline` keyword is required for how this project's tokens are consumed
 - Brand colors: `--color-brand`, `--color-brand-dark`, `--color-brand-light`, `--color-accent`
 - Use `bg-brand`, `text-brand`, `bg-accent` etc. as Tailwind utility classes
-- Font variables: `--font-sans` (Inter), `--font-serif` (Playfair Display)
+- Font variables: `next/font` exposes `--font-inter` and `--font-playfair`; these are composed into `--font-sans` and `--font-serif` in globals.css. Always use `--font-sans`/`--font-serif` in Tailwind utilities, not the raw `next/font` variables.
 - To add a new token: add it under `@theme inline` in globals.css
 
-## shadcn/ui (new-york style)
+## shadcn/ui (base-nova style)
 
 - Components live in `src/components/ui/`
 - Install new components with: `npx shadcn@latest add <component>`
-- Style variant: new-york (configured in `components.json`)
+- Style variant: base-nova (configured in `components.json`)
 - Do NOT manually edit shadcn component files unless absolutely necessary
 
 ## Animation patterns
@@ -86,10 +87,20 @@ import AnimatedSection from '@/components/AnimatedSection'
 
 **GSAP** — used for complex scroll animations (HeroSection):
 ```tsx
-import { useGSAP } from '@gsap/react'
+import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+// Inside component:
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    // animations
+  })
+  return () => ctx.revert()
+}, [])
 ```
+
+Note: `@gsap/react` is installed, but the established project pattern uses `useEffect` + `gsap.context()`, NOT `useGSAP`.
 
 Prefer `AnimatedSection` wrapper for new components. Use raw GSAP only for complex timeline animations.
 
