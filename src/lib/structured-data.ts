@@ -1,3 +1,5 @@
+import { TESTIMONIALS } from './constants'
+
 export function getLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
@@ -94,14 +96,6 @@ export function getWebsiteSchema() {
     description:
       'Premium home decor shop in Ramnagar, Nainital – PVC panels, wallpaper, false ceiling and more.',
     inLanguage: 'en-IN',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://shahhomedecor.in/gallery?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
   }
 }
 
@@ -136,6 +130,7 @@ export function getFaqSchema(faqs: { q: string; a: string }[]) {
 }
 
 export function getAggregateRatingSchema() {
+  const avgRating = TESTIMONIALS.reduce((sum, t) => sum + t.rating, 0) / TESTIMONIALS.length
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -143,33 +138,17 @@ export function getAggregateRatingSchema() {
     name: 'Shri Shah Home Decor',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '3',
+      ratingValue: avgRating.toFixed(1),
+      reviewCount: String(TESTIMONIALS.length),
       bestRating: '5',
       worstRating: '1',
     },
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Ramesh Verma' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Excellent work! Got my entire living room wallpapered and false ceiling done. The team was professional, clean, and finished on time. Highly recommend!',
-        name: 'Wallpaper + False Ceiling',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Priya Singh' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Shah Home Decor transformed our bathroom completely with PVC panels. Very affordable pricing and great quality. Will definitely use again for other rooms.',
-        name: 'PVC Panel Installation',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Mohan Bisht' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: "Got 3D wallpaper for my children's room. The result is stunning and the kids love it! Very patient team who helped us choose the right design.",
-        name: '3D Wallpaper',
-      },
-    ],
+    review: TESTIMONIALS.map((t) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: t.name },
+      reviewRating: { '@type': 'Rating', ratingValue: String(t.rating), bestRating: '5' },
+      reviewBody: t.text,
+      name: t.service,
+    })),
   }
 }

@@ -26,6 +26,16 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+
+    if (!form.name.trim()) {
+      toast.error('Please enter your name.')
+      return
+    }
+    if (!/^\d{10}$/.test(form.phone.trim())) {
+      toast.error('Please enter a valid 10-digit phone number.')
+      return
+    }
+
     setLoading(true)
 
     try {
