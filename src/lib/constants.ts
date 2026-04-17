@@ -190,7 +190,7 @@ export const SERVICES = [
     id: 'grass-matting',
     slug: 'grass-matting',
     name: 'Grass Matting',
-    image: '/images/services/grass.jpg',
+    image: '/images/services/grass.webp',
     shortDesc: 'Artificial turf and grass matting for floors & walls',
     fullDesc:
       'Premium artificial grass and natural grass matting for indoor and outdoor applications. Create lush green walls, balcony floors, garden paths, and decorative panels.',
@@ -218,18 +218,18 @@ export const SERVICES = [
 ]
 
 export const GALLERY_ITEMS = [
-  { id: 1, category: 'wallpaper',     label: 'Floral 3D Wallpaper',        src: '/images/gallery/wallpaper-1.jpg',    aspect: 'tall' },
-  { id: 2, category: 'pvc-panels',    label: 'Modern PVC Wall Panel',       src: '/images/gallery/pvc-1.jpg',          aspect: 'wide' },
-  { id: 3, category: 'false-ceiling', label: 'LED Cove False Ceiling',       src: '/images/gallery/ceiling-1.jpg',      aspect: 'normal' },
-  { id: 4, category: 'wallpaper',     label: 'Abstract 3D Mural',           src: '/images/gallery/wallpaper-abstract-2.jpg', aspect: 'normal' },
-  { id: 5, category: 'grass-matting', label: 'Balcony Grass Flooring',       src: '/images/gallery/grass-floor-1.jpg',  aspect: 'tall' },
-  { id: 6, category: 'wall-stickers', label: 'Decorative Wall Decals',       src: '/images/gallery/sticker-1.jpg',      aspect: 'wide' },
-  { id: 7, category: 'gypsum-tiles',  label: 'Geometric Gypsum Tiles',       src: '/images/gallery/gypsum-1.jpg',       aspect: 'normal' },
-  { id: 8, category: 'false-ceiling', label: 'Grid Ceiling with Spotlights', src: '/images/gallery/ceiling-2.jpg',      aspect: 'wide' },
-  { id: 9, category: 'pvc-panels',    label: 'Bathroom PVC Cladding',        src: '/images/gallery/pvc-2.jpg',          aspect: 'tall' },
-  { id: 10, category: 'wallpaper',    label: 'Tropical Leaf Wallpaper',      src: '/images/gallery/wallpaper-3.jpg',    aspect: 'normal' },
-  { id: 11, category: 'wall-stickers', label: 'Quote Wall Sticker',          src: '/images/gallery/sticker-2.jpg',      aspect: 'normal' },
-  { id: 12, category: 'grass-matting', label: 'Green Wall Installation',     src: '/images/gallery/grass-2.jpg',        aspect: 'wide' },
+  { id: 1, category: 'wallpaper',     label: 'Floral 3D Wallpaper',        src: '/images/gallery/wallpaper-1.webp',    aspect: 'tall' },
+  { id: 2, category: 'pvc-panels',    label: 'Modern PVC Wall Panel',       src: '/images/gallery/pvc-1.jpg',           aspect: 'wide' },
+  { id: 3, category: 'false-ceiling', label: 'LED Cove False Ceiling',       src: '/images/gallery/ceiling-1.jpg',       aspect: 'normal' },
+  { id: 4, category: 'wallpaper',     label: 'Abstract 3D Mural',           src: '/images/gallery/wallpaper-abstract-2.webp', aspect: 'normal' },
+  { id: 5, category: 'grass-matting', label: 'Balcony Grass Flooring',       src: '/images/gallery/grass-floor-1.webp', aspect: 'tall' },
+  { id: 6, category: 'wall-stickers', label: 'Decorative Wall Decals',       src: '/images/gallery/sticker-1.jpg',       aspect: 'wide' },
+  { id: 7, category: 'gypsum-tiles',  label: 'Geometric Gypsum Tiles',       src: '/images/gallery/gypsum-1.jpg',        aspect: 'normal' },
+  { id: 8, category: 'false-ceiling', label: 'Grid Ceiling with Spotlights', src: '/images/gallery/ceiling-2.jpg',       aspect: 'wide' },
+  { id: 9, category: 'pvc-panels',    label: 'Bathroom PVC Cladding',        src: '/images/gallery/pvc-2.jpg',           aspect: 'tall' },
+  { id: 10, category: 'wallpaper',    label: 'Tropical Leaf Wallpaper',      src: '/images/gallery/wallpaper-3.jpg',     aspect: 'normal' },
+  { id: 11, category: 'wall-stickers', label: 'Quote Wall Sticker',          src: '/images/gallery/sticker-2.jpg',       aspect: 'normal' },
+  { id: 12, category: 'grass-matting', label: 'Green Wall Installation',     src: '/images/gallery/grass-2.webp',        aspect: 'wide' },
 ]
 
 export const GALLERY_CATEGORIES = [

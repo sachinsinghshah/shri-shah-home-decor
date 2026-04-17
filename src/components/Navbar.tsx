@@ -67,7 +67,7 @@ export default function Navbar() {
           >
             <LogoImage
               variant="light"
-              height={44}
+              heightClass="h-14 md:h-16"
               className={cn(
                 'transition-all duration-300',
                 !scrolled && isHome ? 'brightness-0 invert' : '',

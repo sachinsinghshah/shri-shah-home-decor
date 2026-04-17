@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href="/" aria-label="Shri Shah Home Decor homepage">
-              <LogoImage variant="dark" height={48} className="mb-4" />
+              <LogoImage variant="dark" heightClass="h-20" className="mb-4" />
             </Link>
             <p className="mb-5 max-w-xs text-sm leading-relaxed text-white/70">
               Premium home decor solutions in Ramnagar, Nainital. Transforming

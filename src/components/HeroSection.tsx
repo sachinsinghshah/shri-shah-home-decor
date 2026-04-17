@@ -194,7 +194,7 @@ export default function HeroSection() {
                       { label: 'PVC Panels', src: '/images/services/pvc.jpg' },
                       { label: '3D Wallpaper', src: '/images/services/wallpaper.jpg' },
                       { label: 'False Ceiling', src: '/images/services/ceiling.jpg' },
-                      { label: 'Grass Matting', src: '/images/services/grass.jpg' },
+                      { label: 'Grass Matting', src: '/images/services/grass.webp' },
                     ].map((item) => (
                       <div
                         key={item.label}

@@ -38,7 +38,17 @@
       "Bash(wait)",
       "Bash(curl -L -o D:/projects/shri-shah-home-decor/public/images/gallery/grass-1.jpg \"https://cdn.pixabay.com/photo/2016/10/03/13/04/artificial-turf-1711556_1280.jpg\")",
       "Bash(curl -L -o D:/projects/shri-shah-home-decor/public/images/gallery/grass-1.jpg \"https://cdn.pixabay.com/photo/2016/11/21/17/50/lawn-1846813_1280.jpg\")",
-      "Bash(xargs sed *)"
+      "Bash(xargs sed *)",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/gallery/grass-2.webp\" \"D:/projects/shri-shah-home-decor/public/images/gallery/grass-2.webp\")",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/gallery/grass-floor-1.webp\" \"D:/projects/shri-shah-home-decor/public/images/gallery/grass-floor-1.webp\")",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/gallery/wallpaper-1.webp\" \"D:/projects/shri-shah-home-decor/public/images/gallery/wallpaper-1.webp\")",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/gallery/wallpaper-abstract-2.webp\" \"D:/projects/shri-shah-home-decor/public/images/gallery/wallpaper-abstract-2.webp\")",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/gallery/gypsum-1.jpg\" \"D:/projects/shri-shah-home-decor/public/images/gallery/gypsum-1.jpg\")",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/ceiling.jpg\" \"D:/projects/shri-shah-home-decor/public/images/services/ceiling.jpg\")",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/grass.webp\" \"D:/projects/shri-shah-home-decor/public/images/services/grass.webp\")",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/gypsum.jpg\" \"D:/projects/shri-shah-home-decor/public/images/services/gypsum.jpg\")",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/pvc.jpg\" \"D:/projects/shri-shah-home-decor/public/images/services/pvc.jpg\")",
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/stickers.jpg\" \"D:/projects/shri-shah-home-decor/public/images/services/stickers.jpg\")"
     ]
   },
   "hooks": {

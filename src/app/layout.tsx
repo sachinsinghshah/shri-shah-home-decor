@@ -93,7 +93,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en-IN" data-scroll-behavior="smooth" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
