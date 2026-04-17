@@ -18,12 +18,14 @@ export default function LogoImage({
     <Image
       src="/logo.png"
       alt="Shri Shah Home Decor – Ramnagar, Nainital"
-      width={Math.round(height * 2.5)}
-      height={height}
+      width={888}
+      height={281}
       priority
+      style={{ height: `${height}px`, width: 'auto' }}
       className={cn(
         'object-contain',
         variant === 'light' && 'logo-light-shadow',
+        variant === 'dark' && 'brightness-0 invert',
         className,
       )}
     />

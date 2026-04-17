@@ -82,11 +82,8 @@ export const metadata: Metadata = {
     google: process.env.GOOGLE_SITE_VERIFICATION ?? 'ADD_GOOGLE_SEARCH_CONSOLE_TOKEN_HERE',
   },
   icons: {
-    icon: [
-      { url: '/favicon-48.png', type: 'image/png', sizes: '48x48' },
-      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
-    ],
-    apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
+    icon: [{ url: '/icon.png', type: 'image/png', sizes: '32x32' }],
+    apple: [{ url: '/icon.png', type: 'image/png', sizes: '180x180' }],
   },
 }
 

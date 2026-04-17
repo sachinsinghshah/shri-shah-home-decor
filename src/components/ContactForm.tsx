@@ -1,47 +1,50 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { toast } from 'sonner'
-import { Send } from 'lucide-react'
-import { motion } from 'motion/react'
-import { SERVICES } from '@/lib/constants'
+import { useState } from "react";
+import { toast } from "sonner";
+import { Send } from "lucide-react";
+import { motion } from "motion/react";
+import { SERVICES } from "@/lib/constants";
 
 export default function ContactForm() {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    service: '',
-    message: '',
-  })
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    message: "",
+  });
 
   function handleChange(
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!form.name.trim()) {
-      toast.error('Please enter your name.')
-      return
+      toast.error("Please enter your name.");
+      return;
     }
     if (!/^\d{10}$/.test(form.phone.trim())) {
-      toast.error('Please enter a valid 10-digit phone number.')
-      return
+      toast.error("Please enter a valid 10-digit phone number.");
+      return;
     }
 
-    setLoading(true)
+    setLoading(true);
 
     try {
-      const res = await fetch('https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      const res = await fetch("https://formspree.io/f/mrerpvdw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
           name: form.name,
           phone: form.phone,
@@ -49,26 +52,30 @@ export default function ContactForm() {
           service: form.service,
           message: form.message,
         }),
-      })
+      });
 
       if (res.ok) {
         toast.success(
           "Thank you! We'll contact you within 24 hours for your free consultation.",
           { duration: 6000 },
-        )
-        setForm({ name: '', phone: '', email: '', service: '', message: '' })
+        );
+        setForm({ name: "", phone: "", email: "", service: "", message: "" });
       } else {
-        toast.error('Something went wrong. Please call us directly at 9548506887.')
+        toast.error(
+          "Something went wrong. Please call us directly at 9548506887.",
+        );
       }
     } catch {
-      toast.error('Something went wrong. Please call us directly at 9548506887.')
+      toast.error(
+        "Something went wrong. Please call us directly at 9548506887.",
+      );
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
 
   const inputClass =
-    'w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm text-[oklch(0.14_0.01_260)] placeholder-[oklch(0.65_0.01_260)] outline-none transition-all duration-200 focus:border-[oklch(0.62_0.14_162)] focus:ring-2 focus:ring-[oklch(0.62_0.14_162)]/20'
+    "w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm text-[oklch(0.14_0.01_260)] placeholder-[oklch(0.65_0.01_260)] outline-none transition-all duration-200 focus:border-[oklch(0.62_0.14_162)] focus:ring-2 focus:ring-[oklch(0.62_0.14_162)]/20";
 
   return (
     <form onSubmit={handleSubmit} noValidate aria-label="Contact form">
@@ -79,7 +86,10 @@ export default function ContactForm() {
               htmlFor="name"
               className="mb-1.5 block text-sm font-medium text-[oklch(0.25_0.01_260)]"
             >
-              Full Name <span className="text-red-500" aria-hidden="true">*</span>
+              Full Name{" "}
+              <span className="text-red-500" aria-hidden="true">
+                *
+              </span>
             </label>
             <input
               id="name"
@@ -98,7 +108,10 @@ export default function ContactForm() {
               htmlFor="phone"
               className="mb-1.5 block text-sm font-medium text-[oklch(0.25_0.01_260)]"
             >
-              Phone Number <span className="text-red-500" aria-hidden="true">*</span>
+              Phone Number{" "}
+              <span className="text-red-500" aria-hidden="true">
+                *
+              </span>
             </label>
             <input
               id="phone"
@@ -220,5 +233,5 @@ export default function ContactForm() {
         </p>
       </div>
     </form>
-  )
+  );
 }
