@@ -4,16 +4,16 @@ export function getLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'HomeAndConstructionBusiness',
-    '@id': 'https://shahhomedecor.in/#business',
+    '@id': 'https://www.shreeshahhomedecor.com/#business',
     name: 'Shri Shah Home Decor',
     alternateName: 'Shah Home Decor',
     description:
       'Premium home decor shop in Ramnagar offering PVC panels, wallpaper, 3D wallpaper, false ceiling, gypsum tiles, wall stickers, and grass matting.',
-    url: 'https://shahhomedecor.in',
+    url: 'https://www.shreeshahhomedecor.com',
     telephone: '+91-9548506887',
     priceRange: '₹₹',
-    image: 'https://shahhomedecor.in/logo.png',
-    logo: 'https://shahhomedecor.in/logo.png',
+    image: 'https://www.shreeshahhomedecor.com/logo.png',
+    logo: 'https://www.shreeshahhomedecor.com/logo.png',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Near Sai Mandir, Behind Guru Kirpa Hardware',
@@ -90,8 +90,8 @@ export function getWebsiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://shahhomedecor.in/#website',
-    url: 'https://shahhomedecor.in',
+    '@id': 'https://www.shreeshahhomedecor.com/#website',
+    url: 'https://www.shreeshahhomedecor.com',
     name: 'Shri Shah Home Decor',
     description:
       'Premium home decor shop in Ramnagar, Nainital – PVC panels, wallpaper, false ceiling and more.',
@@ -134,7 +134,7 @@ export function getAggregateRatingSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://shahhomedecor.in/#business',
+    '@id': 'https://www.shreeshahhomedecor.com/#business',
     name: 'Shri Shah Home Decor',
     aggregateRating: {
       '@type': 'AggregateRating',

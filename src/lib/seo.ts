@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-const BASE_URL = 'https://shahhomedecor.in'
+const BASE_URL = 'https://www.shreeshahhomedecor.com'
 
 export function buildMetadata({
   title,

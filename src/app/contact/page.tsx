@@ -54,8 +54,8 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getBreadcrumbSchema([
-              { name: 'Home', url: 'https://shahhomedecor.in/' },
-              { name: 'Contact', url: 'https://shahhomedecor.in/contact' },
+              { name: 'Home', url: 'https://www.shreeshahhomedecor.com/' },
+              { name: 'Contact', url: 'https://www.shreeshahhomedecor.com/contact' },
             ]),
           ),
         }}

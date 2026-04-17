@@ -25,8 +25,8 @@ export default function GalleryPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getBreadcrumbSchema([
-              { name: 'Home', url: 'https://shahhomedecor.in/' },
-              { name: 'Gallery', url: 'https://shahhomedecor.in/gallery' },
+              { name: 'Home', url: 'https://www.shreeshahhomedecor.com/' },
+              { name: 'Gallery', url: 'https://www.shreeshahhomedecor.com/gallery' },
             ]),
           ),
         }}

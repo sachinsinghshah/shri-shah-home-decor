@@ -1,6 +1,6 @@
 # Google Search Console MCP Setup
 
-Complete this after `shahhomedecor.in` is live and verified in Google Search Console.
+Complete this after `www.shreeshahhomedecor.com` is live and verified in Google Search Console.
 
 ---
 
@@ -17,7 +17,7 @@ The `seo` sub-agent will use `mcp-gsc` to directly query your GSC account for:
 
 ## Prerequisites
 
-- Site is live at `https://shahhomedecor.in`
+- Site is live at `https://www.shreeshahhomedecor.com`
 - Site is verified in Google Search Console
 - MCP server already wired: `~/.claude/.mcp.json` and `~/.claude/settings.json` are configured
 - Credentials folder exists: `C:\Users\sachi\.claude\gsc\`
@@ -72,7 +72,7 @@ Ask Claude:
 
 > "List my Google Search Console properties"
 
-You should see `sc-domain:shahhomedecor.in` or `https://shahhomedecor.in` in the response.
+You should see `sc-domain:www.shreeshahhomedecor.com` or `https://www.shreeshahhomedecor.com` in the response.
 
 ---
 
@@ -82,12 +82,12 @@ Once authenticated, the SEO agent can run queries like:
 
 | What to ask | What it does |
 |---|---|
-| "Show top search queries for shahhomedecor.in last 28 days" | Clicks, impressions, CTR by keyword |
-| "Check indexing issues on shahhomedecor.in" | Finds pages Google can't crawl |
-| "Inspect URL https://shahhomedecor.in/services" | Full crawl + indexing status |
-| "Submit sitemap for shahhomedecor.in" | Pushes sitemap to Google |
-| "Run SEO weekly report for shahhomedecor.in" | Full 28-day performance summary |
-| "Find content opportunities for shahhomedecor.in" | Queries at position 11–20 with high impressions |
+| "Show top search queries for www.shreeshahhomedecor.com last 28 days" | Clicks, impressions, CTR by keyword |
+| "Check indexing issues on www.shreeshahhomedecor.com" | Finds pages Google can't crawl |
+| "Inspect URL https://www.shreeshahhomedecor.com/services" | Full crawl + indexing status |
+| "Submit sitemap for www.shreeshahhomedecor.com" | Pushes sitemap to Google |
+| "Run SEO weekly report for www.shreeshahhomedecor.com" | Full 28-day performance summary |
+| "Find content opportunities for www.shreeshahhomedecor.com" | Queries at position 11–20 with high impressions |
 
 ---
 
@@ -102,4 +102,4 @@ Once authenticated, the SEO agent can run queries like:
 
 **Property not showing up**
 - Make sure the site is verified in GSC under the same Google account you used for OAuth
-- Try both `https://shahhomedecor.in` and `sc-domain:shahhomedecor.in` as property names
+- Try both `https://www.shreeshahhomedecor.com` and `sc-domain:www.shreeshahhomedecor.com` as property names

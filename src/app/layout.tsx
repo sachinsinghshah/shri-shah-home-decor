@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://shahhomedecor.in'),
+  metadataBase: new URL('https://www.shreeshahhomedecor.com'),
   title: {
     default:
       'Shri Shah Home Decor | PVC Panels, Wallpaper & False Ceiling – Ramnagar, Nainital',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://shahhomedecor.in',
+    url: 'https://www.shreeshahhomedecor.com',
     siteName: 'Shri Shah Home Decor',
     title:
       'Shri Shah Home Decor – Premium Wall & Ceiling Solutions in Ramnagar',
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
-  alternates: { canonical: 'https://shahhomedecor.in' },
+  alternates: { canonical: 'https://www.shreeshahhomedecor.com' },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION ?? 'ADD_GOOGLE_SEARCH_CONSOLE_TOKEN_HERE',
   },

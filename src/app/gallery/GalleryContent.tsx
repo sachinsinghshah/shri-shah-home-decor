@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -17,15 +18,6 @@ const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: fals
 const HEIGHTS: Record<string, string> = {
   tall: 'h-72', wide: 'h-44', normal: 'h-56',
 }
-
-const PLACEHOLDER_COLORS = [
-  'from-teal-100 to-emerald-200', 'from-amber-100 to-orange-200',
-  'from-sky-100 to-blue-200', 'from-rose-100 to-pink-200',
-  'from-green-100 to-teal-200', 'from-violet-100 to-purple-200',
-  'from-cyan-100 to-sky-200', 'from-fuchsia-100 to-pink-200',
-  'from-lime-100 to-green-200', 'from-orange-100 to-amber-200',
-  'from-indigo-100 to-violet-200', 'from-teal-200 to-cyan-300',
-]
 
 export default function GalleryContent() {
   const [activeCategory, setActiveCategory] = useState('all')
@@ -118,9 +110,14 @@ export default function GalleryContent() {
                         className="group relative block w-full overflow-hidden rounded-2xl text-left"
                         aria-label={`View ${item.label} – click to enlarge`}
                       >
-                        <div
-                          className={`relative w-full bg-gradient-to-br ${PLACEHOLDER_COLORS[index % PLACEHOLDER_COLORS.length]} ${HEIGHTS[item.aspect] ?? 'h-56'} flex items-end p-4 transition-transform duration-300 group-hover:scale-105`}
-                        >
+                        <div className={`relative w-full ${HEIGHTS[item.aspect] ?? 'h-56'}`}>
+                          <Image
+                            src={item.src}
+                            alt={item.label}
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
                           <div
                             className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                             style={{ backgroundColor: 'rgba(15,110,86,0.65)' }}
@@ -129,7 +126,7 @@ export default function GalleryContent() {
                               View Full Size
                             </span>
                           </div>
-                          <div className="relative z-10 rounded-xl bg-white/80 px-3 py-1.5 backdrop-blur-sm">
+                          <div className="absolute bottom-3 left-3 z-10 rounded-xl bg-white/80 px-3 py-1.5 backdrop-blur-sm">
                             <p className="text-xs font-semibold text-[oklch(0.14_0.01_260)]">{item.label}</p>
                           </div>
                         </div>

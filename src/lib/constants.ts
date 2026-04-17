@@ -23,7 +23,7 @@ export const SITE = {
   },
   mapEmbed:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.123456789!2d79.1312!3d29.3951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDIzJzQyLjQiTiA3OcKwMDcnNTIuMyJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin',
-  url: 'https://shahhomedecor.in',
+  url: 'https://www.shreeshahhomedecor.com',
   stats: [
     { value: 500, suffix: '+', label: 'Happy Clients' },
     { value: 6, suffix: '', label: 'Services Offered' },
@@ -37,6 +37,7 @@ export const SERVICES = [
     id: 'pvc-panels',
     slug: 'pvc-panels',
     name: 'PVC Panels',
+    image: '/images/services/pvc.jpg',
     shortDesc: 'Durable, waterproof wall cladding for every room',
     fullDesc:
       'Premium PVC panels that transform your walls with a sleek, modern finish. Waterproof, termite-resistant, and easy to maintain – perfect for bathrooms, kitchens, and living spaces.',
@@ -69,6 +70,7 @@ export const SERVICES = [
     id: 'wallpaper',
     slug: 'wallpaper',
     name: 'Wallpaper & 3D Wallpaper',
+    image: '/images/services/wallpaper.jpg',
     shortDesc: 'Stunning textures and 3D designs for statement walls',
     fullDesc:
       'From subtle textures to breathtaking 3D murals, our wallpaper collection covers every taste and budget. Transform any wall into a focal point with our premium imported and domestic wallpapers.',
@@ -101,6 +103,7 @@ export const SERVICES = [
     id: 'false-ceiling',
     slug: 'false-ceiling',
     name: 'False Ceiling',
+    image: '/images/services/ceiling.jpg',
     shortDesc: 'Elegant ceilings – gypsum, POP, grid, and metal types',
     fullDesc:
       'Expert false ceiling installation in all types: POP, gypsum board, grid ceiling, metal ceilings, and coffeered designs. Improve insulation, acoustics, and aesthetics simultaneously.',
@@ -129,6 +132,7 @@ export const SERVICES = [
     id: 'gypsum-tiles',
     slug: 'gypsum-tiles',
     name: 'Gypsum Tiles',
+    image: '/images/services/gypsum.jpg',
     shortDesc: 'Premium gypsum tiles for ceilings and accent walls',
     fullDesc:
       'High-quality gypsum tiles for decorative ceilings and feature walls. Lightweight, fire-resistant, and available in dozens of classic and contemporary patterns.',
@@ -157,6 +161,7 @@ export const SERVICES = [
     id: 'wall-stickers',
     slug: 'wall-stickers',
     name: 'Wall Stickers',
+    image: '/images/services/stickers.jpg',
     shortDesc: 'Instant room makeovers with premium vinyl decals',
     fullDesc:
       'High-quality vinyl wall stickers and decals for instant room transformation. From florals to abstract art, quotes to landscapes – removable and reusable designs for every space.',
@@ -185,6 +190,7 @@ export const SERVICES = [
     id: 'grass-matting',
     slug: 'grass-matting',
     name: 'Grass Matting',
+    image: '/images/services/grass.jpg',
     shortDesc: 'Artificial turf and grass matting for floors & walls',
     fullDesc:
       'Premium artificial grass and natural grass matting for indoor and outdoor applications. Create lush green walls, balcony floors, garden paths, and decorative panels.',
@@ -215,8 +221,8 @@ export const GALLERY_ITEMS = [
   { id: 1, category: 'wallpaper',     label: 'Floral 3D Wallpaper',        src: '/images/gallery/wallpaper-1.jpg',    aspect: 'tall' },
   { id: 2, category: 'pvc-panels',    label: 'Modern PVC Wall Panel',       src: '/images/gallery/pvc-1.jpg',          aspect: 'wide' },
   { id: 3, category: 'false-ceiling', label: 'LED Cove False Ceiling',       src: '/images/gallery/ceiling-1.jpg',      aspect: 'normal' },
-  { id: 4, category: 'wallpaper',     label: 'Abstract 3D Mural',           src: '/images/gallery/wallpaper-2.jpg',    aspect: 'normal' },
-  { id: 5, category: 'grass-matting', label: 'Balcony Grass Flooring',       src: '/images/gallery/grass-1.jpg',        aspect: 'tall' },
+  { id: 4, category: 'wallpaper',     label: 'Abstract 3D Mural',           src: '/images/gallery/wallpaper-abstract-2.jpg', aspect: 'normal' },
+  { id: 5, category: 'grass-matting', label: 'Balcony Grass Flooring',       src: '/images/gallery/grass-floor-1.jpg',  aspect: 'tall' },
   { id: 6, category: 'wall-stickers', label: 'Decorative Wall Decals',       src: '/images/gallery/sticker-1.jpg',      aspect: 'wide' },
   { id: 7, category: 'gypsum-tiles',  label: 'Geometric Gypsum Tiles',       src: '/images/gallery/gypsum-1.jpg',       aspect: 'normal' },
   { id: 8, category: 'false-ceiling', label: 'Grid Ceiling with Spotlights', src: '/images/gallery/ceiling-2.jpg',      aspect: 'wide' },

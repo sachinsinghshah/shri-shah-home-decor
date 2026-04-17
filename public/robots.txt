@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://shahhomedecor.in
+Host: https://www.shreeshahhomedecor.com
 
 # Sitemaps
-Sitemap: https://shahhomedecor.in/sitemap.xml
+Sitemap: https://www.shreeshahhomedecor.com/sitemap.xml

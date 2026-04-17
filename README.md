@@ -2,7 +2,7 @@
 
 Production-grade website for **Shri Shah Home Decor**, Ramnagar, Nainital, Uttarakhand.
 
-- **URL:** https://shahhomedecor.in (after deployment)
+- **URL:** https://www.shreeshahhomedecor.com (after deployment)
 - **Phone:** 9548506887
 - **Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS v4, shadcn/ui, GSAP 3 + Motion
 
@@ -102,7 +102,7 @@ public/
 
 3. **Add custom domain:**
    - Vercel Dashboard → Your Project → Settings → Domains
-   - Add `shahhomedecor.in` and set DNS records as instructed
+   - Add `www.shreeshahhomedecor.com` and set DNS records as instructed
 
 4. **Environment variables (Vercel dashboard):**
    ```
@@ -111,8 +111,8 @@ public/
 
 5. **After deploy — submit sitemap:**
    - Google Search Console: https://search.google.com/search-console
-     - Add property `https://shahhomedecor.in`
-     - Sitemaps → Submit: `https://shahhomedecor.in/sitemap.xml`
+     - Add property `https://www.shreeshahhomedecor.com`
+     - Sitemaps → Submit: `https://www.shreeshahhomedecor.com/sitemap.xml`
    - Bing Webmaster: https://www.bing.com/webmasters
 
 ---

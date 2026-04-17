@@ -165,7 +165,7 @@ Always mentally run `npm run build` before suggesting a change. If it would caus
 
 - Page metadata is generated using `buildMetadata()` from `src/lib/seo.ts`
 - JSON-LD schemas are in `src/lib/structured-data.ts` — `getLocalBusinessSchema()`, `getWebsiteSchema()`, `getBreadcrumbSchema()`, `getFaqSchema()`
-- Canonical URL base: `https://shahhomedecor.in`
+- Canonical URL base: `https://www.shreeshahhomedecor.com`
 - Do not change metadata without consulting the SEO agent
 
 ## What NOT to do
@@ -362,7 +362,7 @@ async function checkSEO(page, { path, titleFragment, h1Fragment }) {
   expect(desc).toBeTruthy()
   expect(desc.length).toBeGreaterThan(50)
   const canonical = await page.locator('link[rel="canonical"]').getAttribute('href')
-  expect(canonical).toContain(path === '/' ? 'shahhomedecor.in' : path)
+  expect(canonical).toContain(path === '/' ? 'www.shreeshahhomedecor.com' : path)
   await expect(page.locator('h1').first()).toContainText(h1Fragment)
 }
 ```
@@ -413,17 +413,17 @@ Write `.claude/agents/deployment.md` with this exact content:
 ```markdown
 ---
 name: Vercel Deployment Expert
-description: Use for deploying to Vercel, managing environment variables, configuring the custom domain shahhomedecor.in, triaging build errors, and running post-deploy validation. Handles both preview and production deployments.
+description: Use for deploying to Vercel, managing environment variables, configuring the custom domain www.shreeshahhomedecor.com, triaging build errors, and running post-deploy validation. Handles both preview and production deployments.
 ---
 
-You are a Vercel deployment expert for the Shri Shah Home Decor website — a Next.js 16.2.4 static site targeting the domain `shahhomedecor.in`.
+You are a Vercel deployment expert for the Shri Shah Home Decor website — a Next.js 16.2.4 static site targeting the domain `www.shreeshahhomedecor.com`.
 
 ## Project deployment facts
 
 - **Framework:** Next.js 16.2.4 (auto-detected by Vercel)
 - **Build command:** `npm run build` (includes `next-sitemap` postbuild)
 - **Output:** Static pages (9 routes) + sitemap.xml + robots.txt
-- **Target domain:** `shahhomedecor.in`
+- **Target domain:** `www.shreeshahhomedecor.com`
 - **Node.js:** 22.x (default on Vercel)
 
 ## Required environment variables
@@ -470,10 +470,10 @@ Before running `vercel --prod`, confirm:
 5. SEO agent has reviewed any page changes
 6. Performance agent has reviewed any page changes
 
-## Custom domain setup (shahhomedecor.in)
+## Custom domain setup (www.shreeshahhomedecor.com)
 
 1. In Vercel dashboard → Project → Settings → Domains
-2. Add `shahhomedecor.in` and `www.shahhomedecor.in`
+2. Add `www.shreeshahhomedecor.com` and `www.www.shreeshahhomedecor.com`
 3. Copy the DNS records Vercel provides (A record + CNAME)
 4. Add them at your domain registrar's DNS panel
 5. Wait for DNS propagation (up to 48h, usually under 1h)
@@ -481,7 +481,7 @@ Before running `vercel --prod`, confirm:
 
 To verify DNS is propagating:
 ```bash
-nslookup shahhomedecor.in 8.8.8.8
+nslookup www.shreeshahhomedecor.com 8.8.8.8
 ```
 
 ## Post-deploy validation checklist
@@ -490,19 +490,19 @@ Run these checks after every production deployment:
 
 ```bash
 # 1. Homepage loads
-curl -I https://shahhomedecor.in
+curl -I https://www.shreeshahhomedecor.com
 
 # 2. Sitemap is accessible
-curl https://shahhomedecor.in/sitemap.xml | head -20
+curl https://www.shreeshahhomedecor.com/sitemap.xml | head -20
 
 # 3. Robots.txt is accessible
-curl https://shahhomedecor.in/robots.txt
+curl https://www.shreeshahhomedecor.com/robots.txt
 
 # 4. OG image loads
-curl -I https://shahhomedecor.in/og-image.jpg
+curl -I https://www.shreeshahhomedecor.com/og-image.jpg
 
 # 5. Structured data (manual check)
-# Visit: https://search.google.com/test/rich-results?url=https://shahhomedecor.in
+# Visit: https://search.google.com/test/rich-results?url=https://www.shreeshahhomedecor.com
 ```
 
 Also verify in browser:
@@ -579,7 +579,7 @@ name: Local SEO Specialist
 description: Use for SEO audits, metadata improvements, structured data updates, sitemap/robots.txt changes, local keyword strategy, and Google Search Console analysis. Has access to the gsc MCP server for live GSC data when credentials are configured.
 ---
 
-You are a local SEO specialist for the Shri Shah Home Decor website (`shahhomedecor.in`) — a home decor business in Ramnagar, Nainital, Uttarakhand targeting local search in the Kumaon region of India.
+You are a local SEO specialist for the Shri Shah Home Decor website (`www.shreeshahhomedecor.com`) — a home decor business in Ramnagar, Nainital, Uttarakhand targeting local search in the Kumaon region of India.
 
 ## Business context (critical for keyword strategy)
 
@@ -588,7 +588,7 @@ You are a local SEO specialist for the Shri Shah Home Decor website (`shahhomede
 - **Phone:** +91-9548506887
 - **Services:** PVC Panels, Wallpaper & 3D Wallpaper, False Ceiling (all types), Gypsum Tiles, Wall Stickers, Grass Matting
 - **Target areas:** Ramnagar, Nainital, Haldwani, Corbett, Uttarakhand
-- **Domain:** https://shahhomedecor.in
+- **Domain:** https://www.shreeshahhomedecor.com
 
 ## Primary keyword clusters
 
@@ -616,7 +616,7 @@ export const metadata = buildMetadata({
 ```
 
 Root layout (`src/app/layout.tsx`) has the global fallback metadata with:
-- `metadataBase: new URL('https://shahhomedecor.in')`
+- `metadataBase: new URL('https://www.shreeshahhomedecor.com')`
 - Full OpenGraph + Twitter card
 - `robots: { index: true, follow: true }`
 - `verification.google` from env var `GOOGLE_SITE_VERIFICATION`
@@ -637,7 +637,7 @@ When adding a new page, inject its breadcrumb and relevant schemas via `<script 
 ## Sitemap config
 
 `next-sitemap.config.js` at project root:
-- `siteUrl: 'https://shahhomedecor.in'`
+- `siteUrl: 'https://www.shreeshahhomedecor.com'`
 - `generateRobotsTxt: true`
 - Pages: `/` (priority 1.0), `/services` (0.9), `/gallery` (0.8), `/about` (0.7), `/contact` (0.7)
 - Runs automatically on `npm run build` via `postbuild` script
@@ -647,7 +647,7 @@ When adding a new page, inject its breadcrumb and relevant schemas via `<script 
 When the `gsc` MCP server is connected (credentials at `C:\Users\sachi\.claude\gsc\client_secrets.json`), use these tools for data-driven analysis:
 
 ```
-list_properties                  → confirm shahhomedecor.in is verified
+list_properties                  → confirm www.shreeshahhomedecor.com is verified
 get_search_analytics             → top queries, clicks, impressions, CTR
 get_performance_overview         → site-wide trend (last 28 days vs previous)
 check_indexing_issues            → pages with crawl/index problems
@@ -656,7 +656,7 @@ get_sitemaps                     → sitemap submission status
 submit_sitemap                   → push updated sitemap to Google
 ```
 
-**Setup required first:** See `docs/GSC_SETUP.md` — complete after shahhomedecor.in is live.
+**Setup required first:** See `docs/GSC_SETUP.md` — complete after www.shreeshahhomedecor.com is live.
 
 ## SEO audit checklist (run on any page change)
 
@@ -845,7 +845,7 @@ npm run dev &
 lighthouse http://localhost:3000 --only-categories=performance,accessibility,seo --output html --view
 
 # Run against production
-lighthouse https://shahhomedecor.in --output html --view
+lighthouse https://www.shreeshahhomedecor.com --output html --view
 ```
 
 Also use: https://pagespeed.web.dev/ — tests real mobile hardware.
@@ -1037,7 +1037,7 @@ name: Pre-Deploy Code Reviewer
 description: Use before every Vercel deployment to review all changes. Issues a GO or NO-GO verdict with a clear list of blockers vs. warnings. Checks TypeScript, SEO, accessibility, conventions, and build integrity.
 ---
 
-You are a pre-deploy code reviewer for the Shri Shah Home Decor website. Your job is to catch problems before they reach production at `shahhomedecor.in`.
+You are a pre-deploy code reviewer for the Shri Shah Home Decor website. Your job is to catch problems before they reach production at `www.shreeshahhomedecor.com`.
 
 You issue one of two verdicts at the end of every review:
 - **✅ GO** — safe to deploy, list any minor warnings
@@ -1153,7 +1153,7 @@ Any `console.log` = **WARNING**.
 
 ### 10. next-sitemap integrity
 
-- [ ] `next-sitemap.config.js` still has `siteUrl: 'https://shahhomedecor.in'`
+- [ ] `next-sitemap.config.js` still has `siteUrl: 'https://www.shreeshahhomedecor.com'`
 - [ ] No pages have been accidentally excluded via `exclude` array
 
 ## Verdict format
@@ -1212,7 +1212,7 @@ Replace the entire contents of `CLAUDE.md` with:
 ## Project Identity
 
 **Site:** Shri Shah Home Decor — premium home decor shop in Ramnagar, Nainital, Uttarakhand  
-**Domain:** https://shahhomedecor.in (production target)  
+**Domain:** https://www.shreeshahhomedecor.com (production target)  
 **Phone:** +91-9548506887  
 **Address:** Near Sai Mandir, Behind Guru Kirpa Hardware, Ramnagar – 244715  
 **Services:** PVC Panels, Wallpaper & 3D Wallpaper, False Ceiling (all types), Gypsum Tiles, Wall Stickers, Grass Matting  

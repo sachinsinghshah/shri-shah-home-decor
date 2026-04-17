@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'motion/react'
 import { Phone, ChevronDown, Star, CheckCircle2 } from 'lucide-react'
 import gsap from 'gsap'
@@ -190,16 +191,24 @@ export default function HeroSection() {
                 <div className="flex h-full flex-col justify-between">
                   <div className="grid grid-cols-2 gap-3 flex-1">
                     {[
-                      { label: 'PVC Panels', bg: 'from-teal-400 to-emerald-500' },
-                      { label: '3D Wallpaper', bg: 'from-amber-400 to-orange-500' },
-                      { label: 'False Ceiling', bg: 'from-sky-400 to-blue-500' },
-                      { label: 'Grass Matting', bg: 'from-green-400 to-emerald-600' },
+                      { label: 'PVC Panels', src: '/images/services/pvc.jpg' },
+                      { label: '3D Wallpaper', src: '/images/services/wallpaper.jpg' },
+                      { label: 'False Ceiling', src: '/images/services/ceiling.jpg' },
+                      { label: 'Grass Matting', src: '/images/services/grass.jpg' },
                     ].map((item) => (
                       <div
                         key={item.label}
-                        className={`flex items-end rounded-xl bg-gradient-to-br ${item.bg} p-3`}
+                        className="relative flex items-end rounded-xl overflow-hidden"
                       >
-                        <span className="text-xs font-semibold text-white drop-shadow">
+                        <Image
+                          src={item.src}
+                          alt={item.label}
+                          fill
+                          sizes="140px"
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <span className="relative z-10 p-3 text-xs font-semibold text-white drop-shadow">
                           {item.label}
                         </span>
                       </div>

@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Fix all pre-deploy blockers, close SEO gaps, and verify clean build so the site is ready to deploy to shahhomedecor.in.
+**Goal:** Fix all pre-deploy blockers, close SEO gaps, and verify clean build so the site is ready to deploy to www.shreeshahhomedecor.com.
 
 **Architecture:** Seven focused fixes across metadata, favicon, lightbox CSS, contact form, structured data, footer, and build verification. Each task is independent and self-contained.
 
@@ -307,7 +307,7 @@ export function getAggregateRatingSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://shahhomedecor.in/#business',
+    '@id': 'https://www.shreeshahhomedecor.com/#business',
     name: 'Shri Shah Home Decor',
     aggregateRating: {
       '@type': 'AggregateRating',

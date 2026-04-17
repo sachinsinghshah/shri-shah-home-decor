@@ -101,7 +101,7 @@ Handles all deployment tasks — first deploy, domain DNS, env vars, build failu
 
 ```
 "Deploy the site to Vercel for the first time"
-"Set up shahhomedecor.in as the custom domain"
+"Set up www.shreeshahhomedecor.com as the custom domain"
 "Add GOOGLE_SITE_VERIFICATION to production env vars"
 "The Vercel build is failing with 'Module not found' — diagnose and fix"
 "Run post-deploy validation to confirm everything is live"
@@ -130,12 +130,12 @@ SEO audits, keyword strategy, metadata improvements, structured data, and live G
 "Improve the title and meta description for the gallery page"
 "Add FAQ structured data to the services page"
 "What local keywords should the homepage target?"
-"Show top search queries for shahhomedecor.in in the last 28 days"  ← GSC required
+"Show top search queries for www.shreeshahhomedecor.com in the last 28 days"  ← GSC required
 "Check if any pages have indexing issues"  ← GSC required
 "Find content opportunities — queries at position 11–20 with high impressions"  ← GSC required
 ```
 
-**GSC setup:** Follow `docs/GSC_SETUP.md` after the site goes live at shahhomedecor.in.
+**GSC setup:** Follow `docs/GSC_SETUP.md` after the site goes live at www.shreeshahhomedecor.com.
 
 ---
 
@@ -350,7 +350,7 @@ Step 6: "Deploy to production"
 ### "Ready to go live for the first time"
 
 ```
-"The site is ready. Run SEO audit, performance audit, and code review — then deploy to Vercel and set up the shahhomedecor.in domain"
+"The site is ready. Run SEO audit, performance audit, and code review — then deploy to Vercel and set up the www.shreeshahhomedecor.com domain"
 ```
 
 → seo + performance in parallel, then code-review, then deployment agent
@@ -392,12 +392,12 @@ When in doubt, describe the task — Claude will pick the right agent.
 
 ## GSC Integration (After Launch)
 
-Once shahhomedecor.in is live and GSC is configured (see `docs/GSC_SETUP.md`), the SEO agent gains live data access:
+Once www.shreeshahhomedecor.com is live and GSC is configured (see `docs/GSC_SETUP.md`), the SEO agent gains live data access:
 
 ```
-"Show top 20 search queries for shahhomedecor.in last 28 days"
+"Show top 20 search queries for www.shreeshahhomedecor.com last 28 days"
 "Which pages have indexing issues?"
-"Inspect URL https://shahhomedecor.in/services"
+"Inspect URL https://www.shreeshahhomedecor.com/services"
 "Submit the sitemap to Google"
 "Run a full SEO weekly report"
 "Find keywords we rank 11–20 for — content opportunities"

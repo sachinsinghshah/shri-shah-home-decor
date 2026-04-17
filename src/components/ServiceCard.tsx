@@ -39,9 +39,11 @@ export default function ServiceCard({
     <motion.article
       data-animate
       initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
       whileHover={{ y: -4 }}
       whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.25 }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
       className={cn(
         'group relative overflow-hidden rounded-2xl border border-black/6 bg-white p-6 shadow-sm',
         'transition-shadow duration-300 hover:border-[oklch(0.82_0.09_162)] hover:shadow-md',

@@ -1,6 +1,6 @@
 # Design: Optimized CLAUDE.md + 7 Sub-Agents
 **Date:** 2026-04-17
-**Project:** Shri Shah Home Decor (`shahhomedecor.in`)
+**Project:** Shri Shah Home Decor (`www.shreeshahhomedecor.com`)
 
 ---
 
@@ -70,7 +70,7 @@ All agents live in `.claude/agents/<name>.md`.
 - **Key behaviours:**
   - Manages preview vs. production deployments
   - Handles `vercel env` for `GOOGLE_SITE_VERIFICATION` and any future secrets
-  - Configures custom domain `shahhomedecor.in` on Vercel
+  - Configures custom domain `www.shreeshahhomedecor.com` on Vercel
   - Runs post-deploy checklist: sitemap live, robots.txt accessible, OG image loads, structured data valid
   - Triages Vercel build errors by reading logs before suggesting fixes
 

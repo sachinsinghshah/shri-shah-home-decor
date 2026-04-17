@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronRight, CheckCircle2, Phone } from 'lucide-react'
 import Navbar from '@/components/Navbar'
@@ -35,8 +36,8 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getBreadcrumbSchema([
-              { name: 'Home', url: 'https://shahhomedecor.in/' },
-              { name: 'Services', url: 'https://shahhomedecor.in/services' },
+              { name: 'Home', url: 'https://www.shreeshahhomedecor.com/' },
+              { name: 'Services', url: 'https://www.shreeshahhomedecor.com/services' },
             ]),
           ),
         }}
@@ -94,23 +95,14 @@ export default function ServicesPage() {
                   className="grid gap-10 rounded-3xl border border-black/6 bg-white p-8 shadow-sm lg:grid-cols-2 lg:items-center"
                 >
                   <div className={index % 2 !== 0 ? 'lg:order-2' : ''}>
-                    {/* Colored tile placeholder */}
-                    <div
-                      className={`flex h-56 items-center justify-center rounded-2xl ${service.color} md:h-72`}
-                    >
-                      <div className="text-center">
-                        <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/60">
-                          <span className="text-3xl" aria-hidden="true">
-                            {index === 0 ? '🏠' : index === 1 ? '🖼️' : index === 2 ? '✨' : index === 3 ? '🧱' : index === 4 ? '⭐' : '🌿'}
-                          </span>
-                        </div>
-                        <p className="font-serif text-xl font-semibold text-[oklch(0.14_0.01_260)]">
-                          {service.name}
-                        </p>
-                        <p className="mt-1 text-xs text-[oklch(0.45_0.01_260)]">
-                          Add your photos here
-                        </p>
-                      </div>
+                    <div className="relative h-56 overflow-hidden rounded-2xl md:h-72">
+                      <Image
+                        src={service.image}
+                        alt={`${service.name} installation`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
                     </div>
                   </div>
 

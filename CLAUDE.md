@@ -5,7 +5,7 @@
 ## Project Identity
 
 **Site:** Shri Shah Home Decor — premium home decor shop in Ramnagar, Nainital, Uttarakhand  
-**Domain:** https://shahhomedecor.in (production target)  
+**Domain:** https://www.shreeshahhomedecor.com (production target)  
 **Phone:** +91-9548506887  
 **Address:** Near Sai Mandir, Behind Guru Kirpa Hardware, Ramnagar – 244715  
 **Services:** PVC Panels, Wallpaper & 3D Wallpaper, False Ceiling (all types), Gypsum Tiles, Wall Stickers, Grass Matting  

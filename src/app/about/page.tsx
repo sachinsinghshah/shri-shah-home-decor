@@ -33,8 +33,8 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getBreadcrumbSchema([
-              { name: 'Home', url: 'https://shahhomedecor.in/' },
-              { name: 'About', url: 'https://shahhomedecor.in/about' },
+              { name: 'Home', url: 'https://www.shreeshahhomedecor.com/' },
+              { name: 'About', url: 'https://www.shreeshahhomedecor.com/about' },
             ]),
           ),
         }}

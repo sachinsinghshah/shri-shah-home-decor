@@ -10,16 +10,6 @@ import { GALLERY_ITEMS } from '@/lib/constants'
 
 const PREVIEW_ITEMS = GALLERY_ITEMS.slice(0, 6)
 
-// Pastel backgrounds as placeholders
-const PLACEHOLDER_COLORS = [
-  'from-teal-100 to-emerald-200',
-  'from-amber-100 to-orange-200',
-  'from-sky-100 to-blue-200',
-  'from-rose-100 to-pink-200',
-  'from-green-100 to-teal-200',
-  'from-violet-100 to-purple-200',
-]
-
 export default function GalleryPreview() {
   return (
     <section
@@ -44,12 +34,18 @@ export default function GalleryPreview() {
               className="masonry-item"
             >
               <div className="group relative overflow-hidden rounded-2xl">
-                {/* Gradient placeholder (shown until real images are added) */}
                 <div
-                  className={`relative flex h-48 w-full items-end bg-gradient-to-br p-4 ${PLACEHOLDER_COLORS[index % PLACEHOLDER_COLORS.length]} ${
+                  className={`relative w-full ${
                     item.aspect === 'tall' ? 'h-64' : item.aspect === 'wide' ? 'h-40' : 'h-48'
                   }`}
                 >
+                  <Image
+                    src={item.src}
+                    alt={item.label}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                   {/* Overlay on hover */}
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -61,9 +57,8 @@ export default function GalleryPreview() {
                       {item.label}
                     </span>
                   </motion.div>
-
                   {/* Label */}
-                  <div className="relative z-10 rounded-xl bg-white/80 px-3 py-1.5 backdrop-blur-sm">
+                  <div className="absolute bottom-3 left-3 z-10 rounded-xl bg-white/80 px-3 py-1.5 backdrop-blur-sm">
                     <p className="text-xs font-semibold text-[oklch(0.14_0.01_260)]">
                       {item.label}
                     </p>
