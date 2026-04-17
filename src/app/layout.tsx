@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
-import { getLocalBusinessSchema, getWebsiteSchema, getAggregateRatingSchema } from '@/lib/structured-data'
+import { getLocalBusinessSchema, getWebsiteSchema } from '@/lib/structured-data'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.shreeshahhomedecor.com'),
   title: {
     default:
-      'Shri Shah Home Decor | PVC Panels, Wallpaper & False Ceiling – Ramnagar, Nainital',
+      'Shri Shah Home Decor Ramnagar | PVC Panels & Wallpaper',
     template: '%s | Shri Shah Home Decor',
   },
   description:
-    'Best home decor shop in Ramnagar, Nainital. Premium PVC panels, 3D wallpaper, false ceiling (all types), gypsum tiles, wall stickers & grass matting. Expert installation. Call: 9548506887.',
+    'Best home decor shop in Ramnagar, Nainital. PVC panels, 3D wallpaper, false ceiling, gypsum tiles & grass matting. Expert installation. Call 9548506887.',
   keywords: [
     'wallpaper shop ramnagar',
     'pvc panel nainital',
@@ -111,12 +111,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(getWebsiteSchema()),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getAggregateRatingSchema()),
           }}
         />
       </head>

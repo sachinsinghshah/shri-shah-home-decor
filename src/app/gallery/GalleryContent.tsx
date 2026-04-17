@@ -142,6 +142,31 @@ export default function GalleryContent() {
             )}
           </div>
         </section>
+
+        <section className="py-16 text-center" style={{ backgroundColor: 'oklch(0.97 0.005 162)' }}>
+          <div className="container-xl">
+            <h2 className="mb-4 font-serif text-3xl text-[oklch(0.14_0.01_260)]">
+              Like what you see?
+            </h2>
+            <p className="mb-8 text-[oklch(0.45_0.01_260)]">
+              Get a similar transformation for your home in Ramnagar or Nainital.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/contact"
+                className="rounded-full bg-[oklch(0.62_0.14_162)] px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[oklch(0.54_0.14_162)]"
+              >
+                Get Free Quote
+              </Link>
+              <Link
+                href="/services"
+                className="rounded-full border border-[oklch(0.62_0.14_162)] px-8 py-3.5 text-sm font-semibold text-[oklch(0.62_0.14_162)] transition-colors hover:bg-[oklch(0.96_0.04_162)]"
+              >
+                View Our Services
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
       <WhatsAppButton />

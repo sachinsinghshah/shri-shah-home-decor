@@ -11,9 +11,9 @@ import { SITE } from '@/lib/constants'
 import { getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Contact Us – Visit Shah Home Decor, Ramnagar',
+  title: 'Contact – Shah Home Decor, Ramnagar',
   description:
-    'Contact Shri Shah Home Decor in Ramnagar, Nainital. Get a free quote for PVC panels, wallpaper, false ceiling & more. Call 9548506887 or WhatsApp us.',
+    'Contact Shri Shah Home Decor in Ramnagar, Nainital. Get a free quote for PVC panels, wallpaper, false ceiling & more. Call 9548506887 or WhatsApp us today.',
   path: '/contact',
   keywords: ['contact shah home decor', 'home decor quote ramnagar'],
 })
@@ -34,7 +34,7 @@ const CONTACT_ITEMS = [
       'Ramnagar, Nainital – 244715',
       'Uttarakhand, India',
     ],
-    href: `https://maps.google.com/?q=Ramnagar+Nainital+Uttarakhand`,
+    href: 'https://maps.google.com/?q=29.3951,79.1312',
     linkLabel: 'Get directions',
   },
   {
@@ -54,7 +54,7 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getBreadcrumbSchema([
-              { name: 'Home', url: 'https://www.shreeshahhomedecor.com/' },
+              { name: 'Home', url: 'https://www.shreeshahhomedecor.com' },
               { name: 'Contact', url: 'https://www.shreeshahhomedecor.com/contact' },
             ]),
           ),

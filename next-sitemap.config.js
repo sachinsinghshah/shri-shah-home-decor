@@ -7,11 +7,21 @@ module.exports = {
   },
   changefreq: 'weekly',
   priority: 0.7,
-  additionalPaths: async () => [
-    { loc: '/', changefreq: 'weekly', priority: 1.0 },
-    { loc: '/services', changefreq: 'weekly', priority: 0.9 },
-    { loc: '/gallery', changefreq: 'monthly', priority: 0.8 },
-    { loc: '/about', changefreq: 'monthly', priority: 0.7 },
-    { loc: '/contact', changefreq: 'monthly', priority: 0.7 },
-  ],
+  exclude: ['/apple-icon.png', '/icon.png', '/manifest.webmanifest', '/favicon*'],
+  transform: async (config, path) => {
+    const priorities = {
+      '/': 1.0,
+      '/services': 0.9,
+      '/services/pvc-panels': 0.9,
+      '/gallery': 0.8,
+      '/about': 0.7,
+      '/contact': 0.7,
+    }
+    return {
+      loc: path,
+      changefreq: config.changefreq,
+      priority: priorities[path] ?? config.priority,
+      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+    }
+  },
 }

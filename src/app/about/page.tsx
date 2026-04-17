@@ -11,7 +11,7 @@ import { SITE, SERVICES } from '@/lib/constants'
 import { getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About Us – Shri Shah Home Decor, Ramnagar',
+  title: 'About Us – Home Decor Shop, Ramnagar',
   description:
     'Learn about Shri Shah Home Decor – over 10 years of transforming homes in Ramnagar, Nainital with premium PVC panels, wallpaper, false ceilings and more.',
   path: '/about',
@@ -33,7 +33,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getBreadcrumbSchema([
-              { name: 'Home', url: 'https://www.shreeshahhomedecor.com/' },
+              { name: 'Home', url: 'https://www.shreeshahhomedecor.com' },
               { name: 'About', url: 'https://www.shreeshahhomedecor.com/about' },
             ]),
           ),

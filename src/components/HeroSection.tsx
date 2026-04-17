@@ -11,7 +11,7 @@ import { SITE } from '@/lib/constants'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const HEADLINE_WORDS = ['Transform', 'your', 'home', 'with', 'beautiful', 'wall', 'solutions']
+const HEADLINE_WORDS = ['Premium', 'home', 'decor', 'in', 'Ramnagar', '&', 'Nainital']
 
 export default function HeroSection() {
   const wordsRef = useRef<(HTMLSpanElement | null)[]>([])

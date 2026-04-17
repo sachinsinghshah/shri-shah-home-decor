@@ -81,8 +81,29 @@ export function getLocalBusinessSchema() {
         },
       ],
     },
-    areaServed: ['Ramnagar', 'Nainital', 'Haldwani', 'Corbett', 'Uttarakhand'],
+    areaServed: [
+      { '@type': 'City', name: 'Ramnagar', containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Nainital', containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Haldwani', containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
+      { '@type': 'AdministrativeArea', name: 'Uttarakhand' },
+    ],
     sameAs: ['https://wa.me/919548506887'],
+    aggregateRating: (() => {
+      const avgRating = TESTIMONIALS.reduce((sum, t) => sum + t.rating, 0) / TESTIMONIALS.length
+      return {
+        '@type': 'AggregateRating',
+        ratingValue: avgRating.toFixed(1),
+        reviewCount: String(TESTIMONIALS.length),
+        bestRating: '5',
+        worstRating: '1',
+      }
+    })(),
+    review: TESTIMONIALS.map((t) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: t.name },
+      reviewRating: { '@type': 'Rating', ratingValue: String(t.rating), bestRating: '5' },
+      reviewBody: t.text,
+    })),
   }
 }
 
@@ -114,6 +135,48 @@ export function getBreadcrumbSchema(
   }
 }
 
+export function getPVCPanelServiceSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://www.shreeshahhomedecor.com/services/pvc-panels#service',
+    name: 'PVC Panel Installation',
+    description:
+      'Professional PVC panel installation for walls and ceilings. Waterproof, termite-proof, 100+ designs. Serving Ramnagar, Nainital, Haldwani, and all of Uttarakhand.',
+    provider: {
+      '@type': 'LocalBusiness',
+      '@id': 'https://www.shreeshahhomedecor.com/#business',
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Ramnagar', containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Nainital', containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Haldwani', containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Corbett', containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Rudrapur', containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
+      { '@type': 'City', name: 'Kashipur', containedInPlace: { '@type': 'State', name: 'Uttarakhand' } },
+      { '@type': 'AdministrativeArea', name: 'Uttarakhand' },
+    ],
+    serviceType: 'PVC Panel Installation',
+    offers: {
+      '@type': 'Offer',
+      description: 'Free site visit and transparent quote for PVC panel installation across Uttarakhand',
+      availability: 'https://schema.org/InStock',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'PVC Panel Types',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Plain & Solid Colour PVC Wall Panels' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Marble Finish PVC Panels' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wood Texture PVC Panels' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '3D Textured PVC Panels' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ceiling PVC Panels' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Foam-Core Insulation PVC Panels' } },
+      ],
+    },
+  }
+}
+
 export function getFaqSchema(faqs: { q: string; a: string }[]) {
   return {
     '@context': 'https://schema.org',
@@ -129,26 +192,3 @@ export function getFaqSchema(faqs: { q: string; a: string }[]) {
   }
 }
 
-export function getAggregateRatingSchema() {
-  const avgRating = TESTIMONIALS.reduce((sum, t) => sum + t.rating, 0) / TESTIMONIALS.length
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': 'https://www.shreeshahhomedecor.com/#business',
-    name: 'Shri Shah Home Decor',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: avgRating.toFixed(1),
-      reviewCount: String(TESTIMONIALS.length),
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: TESTIMONIALS.map((t) => ({
-      '@type': 'Review',
-      author: { '@type': 'Person', name: t.name },
-      reviewRating: { '@type': 'Rating', ratingValue: String(t.rating), bestRating: '5' },
-      reviewBody: t.text,
-      name: t.service,
-    })),
-  }
-}

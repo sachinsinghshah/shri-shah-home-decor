@@ -4,7 +4,7 @@ export const SITE = {
   tagline: 'Premium Wall & Ceiling Solutions',
   description:
     'Best home decor shop in Ramnagar, Nainital. Premium PVC panels, 3D wallpaper, false ceiling, gypsum tiles, wall stickers & grass matting.',
-  phone: '9548506887',
+  phone: '+919548506887',
   phoneDisplay: '+91 9548506887',
   phoneFormatted: '+91-9548506887',
   whatsapp: 'https://wa.me/919548506887?text=Hi%2C+I+want+to+know+more+about+your+home+decor+services',
@@ -22,7 +22,7 @@ export const SITE = {
     weekend: 'Sunday: 10:00 AM – 6:00 PM',
   },
   mapEmbed:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.123456789!2d79.1312!3d29.3951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDIzJzQyLjQiTiA3OcKwMDcnNTIuMyJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin',
+    'https://maps.google.com/maps?q=29.3951,79.1312&z=16&output=embed',
   url: 'https://www.shreeshahhomedecor.com',
   stats: [
     { value: 500, suffix: '+', label: 'Happy Clients' },
@@ -53,6 +53,26 @@ export const SERVICES = [
     ],
     faqs: [
       {
+        q: 'Why is Shri Shah Home Decor the best PVC panel installer in Uttarakhand?',
+        a: 'With 10+ years of experience, 500+ completed projects, ISI-certified materials, and free site visits, Shri Shah Home Decor is the most trusted PVC panel installer in the region. We serve Ramnagar, Nainital, Haldwani, Corbett, and all of Uttarakhand.',
+      },
+      {
+        q: 'How much do PVC panels cost in Uttarakhand?',
+        a: 'PVC panel prices in Uttarakhand typically range from ₹60–₹180 per sq ft depending on the design and brand. Call us at +91 9548506887 for a free site visit and accurate quote.',
+      },
+      {
+        q: 'Are PVC panels better than tiles for bathrooms?',
+        a: "PVC panels install in 1 day vs 3–5 days for tiles, are 100% waterproof, termite-proof, and more affordable. They're ideal for modern bathroom renovations and work well in Uttarakhand's humid climate.",
+      },
+      {
+        q: 'Do you install PVC panels across all of Uttarakhand?',
+        a: 'Yes! We provide PVC panel installation across Uttarakhand – Ramnagar, Nainital, Haldwani, Corbett, Rudrapur, Kashipur, Almora, Bhimtal, and nearby areas. Contact us to check availability in your town.',
+      },
+      {
+        q: 'What PVC panel designs and brands are available?',
+        a: 'We stock 100+ designs from trusted domestic and imported brands – plain, marble texture, wood finish, 3D textured, and ceiling panels. Visit our shop in Ramnagar to see physical samples.',
+      },
+      {
         q: 'How long do PVC panels last?',
         a: 'With proper installation, PVC panels can last 10–15 years with minimal maintenance.',
       },
@@ -62,7 +82,7 @@ export const SERVICES = [
       },
       {
         q: 'What are the installation charges?',
-        a: 'Installation charges vary by area size. Contact us at 9548506887 for a free site visit and quote.',
+        a: 'Installation charges vary by area size. Contact us at +91 9548506887 for a free site visit and quote.',
       },
     ],
   },
@@ -218,18 +238,18 @@ export const SERVICES = [
 ]
 
 export const GALLERY_ITEMS = [
-  { id: 1, category: 'wallpaper',     label: 'Floral 3D Wallpaper',        src: '/images/gallery/wallpaper-1.webp',    aspect: 'tall' },
-  { id: 2, category: 'pvc-panels',    label: 'Modern PVC Wall Panel',       src: '/images/gallery/pvc-1.jpg',           aspect: 'wide' },
-  { id: 3, category: 'false-ceiling', label: 'LED Cove False Ceiling',       src: '/images/gallery/ceiling-1.jpg',       aspect: 'normal' },
-  { id: 4, category: 'wallpaper',     label: 'Abstract 3D Mural',           src: '/images/gallery/wallpaper-abstract-2.webp', aspect: 'normal' },
-  { id: 5, category: 'grass-matting', label: 'Balcony Grass Flooring',       src: '/images/gallery/grass-floor-1.webp', aspect: 'tall' },
-  { id: 6, category: 'wall-stickers', label: 'Decorative Wall Decals',       src: '/images/gallery/sticker-1.jpg',       aspect: 'wide' },
-  { id: 7, category: 'gypsum-tiles',  label: 'Geometric Gypsum Tiles',       src: '/images/gallery/gypsum-1.jpg',        aspect: 'normal' },
-  { id: 8, category: 'false-ceiling', label: 'Grid Ceiling with Spotlights', src: '/images/gallery/ceiling-2.jpg',       aspect: 'wide' },
-  { id: 9, category: 'pvc-panels',    label: 'Bathroom PVC Cladding',        src: '/images/gallery/pvc-2.jpg',           aspect: 'tall' },
-  { id: 10, category: 'wallpaper',    label: 'Tropical Leaf Wallpaper',      src: '/images/gallery/wallpaper-3.jpg',     aspect: 'normal' },
-  { id: 11, category: 'wall-stickers', label: 'Quote Wall Sticker',          src: '/images/gallery/sticker-2.jpg',       aspect: 'normal' },
-  { id: 12, category: 'grass-matting', label: 'Green Wall Installation',     src: '/images/gallery/grass-2.webp',        aspect: 'wide' },
+  { id: 1, category: 'wallpaper',     label: 'Floral 3D Wallpaper Installation – Ramnagar',   src: '/images/gallery/wallpaper-1.webp',    aspect: 'tall' },
+  { id: 2, category: 'pvc-panels',    label: 'Modern PVC Wall Panel – Nainital',              src: '/images/gallery/pvc-1.jpg',           aspect: 'wide' },
+  { id: 3, category: 'false-ceiling', label: 'LED Cove False Ceiling – Ramnagar',              src: '/images/gallery/ceiling-1.jpg',       aspect: 'normal' },
+  { id: 4, category: 'wallpaper',     label: 'Abstract 3D Mural Wallpaper – Uttarakhand',     src: '/images/gallery/wallpaper-abstract-2.webp', aspect: 'normal' },
+  { id: 5, category: 'grass-matting', label: 'Balcony Grass Flooring – Ramnagar',              src: '/images/gallery/grass-floor-1.webp', aspect: 'tall' },
+  { id: 6, category: 'wall-stickers', label: 'Decorative Wall Decals – Nainital',              src: '/images/gallery/sticker-1.jpg',       aspect: 'wide' },
+  { id: 7, category: 'gypsum-tiles',  label: 'Geometric Gypsum Ceiling Tiles – Ramnagar',     src: '/images/gallery/gypsum-1.jpg',        aspect: 'normal' },
+  { id: 8, category: 'false-ceiling', label: 'Grid Ceiling with Spotlights – Nainital',        src: '/images/gallery/ceiling-2.jpg',       aspect: 'wide' },
+  { id: 9, category: 'pvc-panels',    label: 'Bathroom PVC Wall Cladding – Ramnagar',          src: '/images/gallery/pvc-2.jpg',           aspect: 'tall' },
+  { id: 10, category: 'wallpaper',    label: 'Tropical Leaf Wallpaper – Uttarakhand',          src: '/images/gallery/wallpaper-3.jpg',     aspect: 'normal' },
+  { id: 11, category: 'wall-stickers', label: 'Quote Wall Sticker – Ramnagar',                 src: '/images/gallery/sticker-2.jpg',       aspect: 'normal' },
+  { id: 12, category: 'grass-matting', label: 'Green Grass Wall Installation – Nainital',      src: '/images/gallery/grass-2.webp',        aspect: 'wide' },
 ]
 
 export const GALLERY_CATEGORIES = [
@@ -290,7 +310,7 @@ export const WHY_US_FEATURES = [
 ]
 
 export const NAV_LINKS = [
-  { href: '/#services', label: 'Services' },
+  { href: '/services', label: 'Services' },
   { href: '/gallery',   label: 'Gallery' },
   { href: '/about',     label: 'About' },
   { href: '/contact',   label: 'Contact' },

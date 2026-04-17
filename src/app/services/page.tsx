@@ -12,9 +12,9 @@ import { SERVICES, SITE } from '@/lib/constants'
 import { getBreadcrumbSchema, getFaqSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'PVC Panel, Wallpaper & False Ceiling Services',
+  title: 'Home Decor Services – Ramnagar, Nainital',
   description:
-    'Complete home decor services in Ramnagar, Nainital – PVC panels, 3D wallpaper, false ceiling (all types), gypsum tiles, wall stickers & grass matting. Expert installation. Call 9548506887.',
+    'PVC panels, 3D wallpaper, false ceiling, gypsum tiles, wall stickers & grass matting in Ramnagar, Nainital. Expert installation. Call 9548506887.',
   path: '/services',
   keywords: [
     'pvc panel installation ramnagar',
@@ -36,7 +36,7 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getBreadcrumbSchema([
-              { name: 'Home', url: 'https://www.shreeshahhomedecor.com/' },
+              { name: 'Home', url: 'https://www.shreeshahhomedecor.com' },
               { name: 'Services', url: 'https://www.shreeshahhomedecor.com/services' },
             ]),
           ),
@@ -149,6 +149,15 @@ export default function ServicesPage() {
                         <Phone className="h-4 w-4" aria-hidden="true" />
                         Call Now
                       </a>
+                      {service.id === 'pvc-panels' && (
+                        <Link
+                          href="/services/pvc-panels"
+                          className="inline-flex items-center gap-1 text-sm font-medium text-[oklch(0.62_0.14_162)] hover:underline"
+                        >
+                          View full details
+                          <ChevronRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </article>
