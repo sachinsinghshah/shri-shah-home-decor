@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
-import { getLocalBusinessSchema, getWebsiteSchema } from '@/lib/structured-data'
+import { getLocalBusinessSchema, getWebsiteSchema, getAggregateRatingSchema } from '@/lib/structured-data'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -114,6 +114,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(getWebsiteSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getAggregateRatingSchema()),
           }}
         />
       </head>
