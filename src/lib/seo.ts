@@ -31,20 +31,11 @@ export function buildMetadata({
       siteName: 'Shri Shah Home Decor',
       title: `${title} | Shri Shah Home Decor`,
       description,
-      images: [
-        {
-          url: `${BASE_URL}/og-image.jpg`,
-          width: 1200,
-          height: 630,
-          alt: 'Shri Shah Home Decor – Ramnagar, Nainital',
-        },
-      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${title} | Shri Shah Home Decor`,
       description,
-      images: [`${BASE_URL}/og-image.jpg`],
     },
   }
 }

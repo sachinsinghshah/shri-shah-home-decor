@@ -56,21 +56,12 @@ export const metadata: Metadata = {
       'Shri Shah Home Decor – Premium Wall & Ceiling Solutions in Ramnagar',
     description:
       'PVC panels, 3D wallpaper, false ceiling & more in Ramnagar, Nainital. Call: 9548506887.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Shri Shah Home Decor – Ramnagar, Nainital',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Shri Shah Home Decor – Ramnagar, Nainital',
     description:
       'Premium PVC panels, wallpaper, 3D wallpaper, false ceiling – Ramnagar, Nainital',
-    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
