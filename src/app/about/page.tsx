@@ -15,7 +15,13 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Learn about Shri Shah Home Decor – over 10 years of transforming homes in Ramnagar, Nainital with premium PVC panels, wallpaper, false ceilings and more.',
   path: '/about',
-  keywords: ['about shah home decor', 'home decor ramnagar nainital history'],
+  keywords: [
+    'about shah home decor',
+    'home decor ramnagar nainital',
+    'best interior shop ramnagar',
+    'shri shah home decor uttarakhand',
+    'home decor installer ramnagar nainital',
+  ],
 })
 
 const VALUES = [

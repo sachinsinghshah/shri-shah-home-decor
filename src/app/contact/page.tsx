@@ -15,7 +15,14 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Contact Shri Shah Home Decor in Ramnagar, Nainital. Get a free quote for PVC panels, wallpaper, false ceiling & more. Call 9548506887 or WhatsApp us today.',
   path: '/contact',
-  keywords: ['contact shah home decor', 'home decor quote ramnagar'],
+  keywords: [
+    'contact shah home decor',
+    'home decor quote ramnagar',
+    'free site visit ramnagar nainital',
+    'home decor contact uttarakhand',
+    'pvc panel quote nainital',
+    'wallpaper installation estimate ramnagar',
+  ],
 })
 
 const CONTACT_ITEMS = [
