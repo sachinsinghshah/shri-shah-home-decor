@@ -11,17 +11,24 @@ import { SITE } from '@/lib/constants'
 import { getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Contact – Shah Home Decor, Ramnagar',
+  title: 'Contact – Shah Home Decor Ramnagar | Free Quote Kashipur, Nainital',
   description:
-    'Contact Shri Shah Home Decor in Ramnagar, Nainital. Get a free quote for PVC panels, wallpaper, false ceiling & more. Call 9548506887 or WhatsApp us today.',
+    'Contact Shri Shah Home Decor for a free quote in Ramnagar, Kashipur, Peerumadara, Nainital & across Uttarakhand. PVC panels, wallpaper, false ceiling & more. Call 9548506887 or WhatsApp now.',
   path: '/contact',
   keywords: [
     'contact shah home decor',
     'home decor quote ramnagar',
-    'free site visit ramnagar nainital',
+    'home decor quote kashipur',
+    'home decor quote nainital',
+    'free site visit ramnagar',
+    'free site visit kashipur',
+    'free site visit peerumadara',
     'home decor contact uttarakhand',
-    'pvc panel quote nainital',
-    'wallpaper installation estimate ramnagar',
+    'pvc panel quote ramnagar',
+    'pvc panel quote kashipur',
+    'false ceiling quote ramnagar',
+    'wallpaper estimate kashipur',
+    'interior quote ramnagar',
   ],
 })
 

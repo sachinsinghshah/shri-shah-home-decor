@@ -106,16 +106,28 @@ export const SERVICES = [
     ],
     faqs: [
       {
+        q: 'Where can I get wallpaper installed in Ramnagar?',
+        a: 'Shri Shah Home Decor is the top wallpaper shop in Ramnagar. We stock 200+ imported and domestic wallpapers and offer professional installation across Ramnagar, Peerumadara, Kashipur, Nainital, Haldwani, and surrounding areas.',
+      },
+      {
+        q: 'Do you install wallpaper in Kashipur and Peerumadara?',
+        a: 'Yes! We provide wallpaper installation in Kashipur, Peerumadara, Ramnagar, Nainital, Haldwani, Rudrapur, Corbett, and all nearby towns. Call +91 9548506887 to book a free site visit.',
+      },
+      {
+        q: 'What is the cost of wallpaper installation in Uttarakhand?',
+        a: 'Wallpaper installation in Uttarakhand typically costs ₹15–₹60 per sq ft depending on wallpaper type and area. We offer transparent pricing with no hidden charges. Contact us at +91 9548506887 for a free quote.',
+      },
+      {
         q: 'How long does wallpaper installation take?',
-        a: 'A standard bedroom (150 sq ft) typically takes 4–6 hours. We work efficiently to minimise disruption.',
+        a: 'A standard bedroom (150 sq ft) typically takes 4–6 hours. We work efficiently to minimise disruption to your home.',
       },
       {
         q: 'Is 3D wallpaper durable?',
-        a: 'Yes, our 3D wallpapers are printed on heavy-duty vinyl and are fade-resistant for 5+ years.',
+        a: 'Yes, our 3D wallpapers are printed on heavy-duty vinyl and are fade-resistant for 5+ years with minimal maintenance.',
       },
       {
-        q: 'Can I see samples before ordering?',
-        a: 'Absolutely! Visit our shop in Ramnagar to browse hundreds of physical samples.',
+        q: 'Can I see wallpaper samples before ordering?',
+        a: 'Absolutely! Visit our shop near Sai Mandir, Ramnagar to browse hundreds of physical wallpaper samples – plain, 3D, textured, and photo mural designs.',
       },
     ],
   },
@@ -139,12 +151,24 @@ export const SERVICES = [
     ],
     faqs: [
       {
+        q: 'Where can I get false ceiling installed in Ramnagar?',
+        a: 'Shri Shah Home Decor is the most trusted false ceiling contractor in Ramnagar. We offer POP, gypsum board, grid, and metal ceiling installation across Ramnagar, Peerumadara, Kashipur, Nainital, Haldwani, and surrounding areas in Uttarakhand.',
+      },
+      {
+        q: 'Do you do false ceiling in Kashipur and Peerumadara?',
+        a: 'Yes! We install false ceilings in Kashipur, Peerumadara, Ramnagar, Nainital, Haldwani, Rudrapur, Corbett, and all of Kumaon region. Call +91 9548506887 to get a free site estimate.',
+      },
+      {
+        q: 'What is the cost of false ceiling in Uttarakhand?',
+        a: 'False ceiling costs in Uttarakhand range from ₹65–₹200 per sq ft depending on type (POP, gypsum, grid, metal) and design complexity. We provide free site visits and transparent quotes with no hidden charges.',
+      },
+      {
         q: 'What types of false ceilings do you offer?',
-        a: 'We offer POP ceilings, gypsum board ceilings, grid ceilings (T-bar), metal ceilings, and custom coffeered designs.',
+        a: 'We offer POP ceilings, gypsum board ceilings, grid ceilings (T-bar), metal ceilings, and custom coffered designs with integrated LED and cove lighting.',
       },
       {
         q: 'Can you integrate LED lights in the false ceiling?',
-        a: 'Yes! We specialise in integrated LED lighting, cove lighting, and recessed panel lights.',
+        a: 'Yes! We specialise in integrated LED lighting, cove lighting, and recessed panel lights for all false ceiling types.',
       },
     ],
   },

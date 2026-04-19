@@ -19,14 +19,18 @@ export const metadata: Metadata = buildMetadata({
   keywords: [
     'best pvc panel uttarakhand',
     'top pvc panel ramnagar',
+    'pvc panel installation kashipur',
     'pvc panel installation nainital',
+    'pvc panel installation peerumadara',
     'pvc wall panel haldwani',
     'pvc panel price uttarakhand',
     'waterproof pvc panel ramnagar',
     'pvc panel shop uttarakhand',
     'best pvc wall panel nainital',
     'pvc panel installer corbett',
+    'pvc panel kashipur',
     'pvc panel near me uttarakhand',
+    'interior pvc panel ramnagar',
   ],
 })
 

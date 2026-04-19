@@ -12,16 +12,30 @@ import { SERVICES, SITE } from '@/lib/constants'
 import { getBreadcrumbSchema, getFaqSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Home Decor Services – Ramnagar, Nainital',
+  title: 'Interior & Home Decor Services – Ramnagar, Kashipur, Nainital',
   description:
-    'PVC panels, 3D wallpaper, false ceiling, gypsum tiles, wall stickers & grass matting in Ramnagar, Nainital. Expert installation. Call 9548506887.',
+    'PVC panels, 3D wallpaper, false ceiling, gypsum tiles, wall stickers & grass matting in Ramnagar, Kashipur, Nainital, Peerumadara & across Uttarakhand. Expert installation. Call 9548506887.',
   path: '/services',
   keywords: [
     'pvc panel installation ramnagar',
+    'pvc panel installation kashipur',
+    'pvc panel nainital',
+    'wallpaper installation ramnagar',
+    'wallpaper installation kashipur',
     'wallpaper installation nainital',
+    'wallpaper peerumadara',
     'false ceiling ramnagar',
+    'false ceiling kashipur',
+    'false ceiling nainital',
+    'false ceiling peerumadara',
+    '3d wallpaper ramnagar',
+    '3d wallpaper kashipur',
     '3d wallpaper nainital',
     'gypsum tiles ramnagar',
+    'gypsum tiles kashipur',
+    'interior services ramnagar',
+    'interior services kashipur',
+    'interior services nainital',
     'grass matting nainital',
   ],
 })

@@ -11,16 +11,20 @@ import { SITE, SERVICES } from '@/lib/constants'
 import { getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About Us – Home Decor Shop, Ramnagar',
+  title: 'About Us – Best Interior & Home Decor Shop, Ramnagar',
   description:
-    'Learn about Shri Shah Home Decor – over 10 years of transforming homes in Ramnagar, Nainital with premium PVC panels, wallpaper, false ceilings and more.',
+    'Shri Shah Home Decor – 10+ years transforming homes in Ramnagar, Kashipur, Nainital, Peerumadara & across Uttarakhand. Premium PVC panels, wallpaper, false ceilings. Trusted by 500+ families.',
   path: '/about',
   keywords: [
-    'about shah home decor',
-    'home decor ramnagar nainital',
     'best interior shop ramnagar',
+    'best interior shop kashipur',
+    'best interior shop nainital',
+    'home decor ramnagar nainital kashipur',
+    'interior contractor ramnagar',
     'shri shah home decor uttarakhand',
     'home decor installer ramnagar nainital',
+    'interior shop peerumadara',
+    'trusted home decor uttarakhand',
   ],
 })
 

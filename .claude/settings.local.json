@@ -48,7 +48,14 @@
       "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/grass.webp\" \"D:/projects/shri-shah-home-decor/public/images/services/grass.webp\")",
       "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/gypsum.jpg\" \"D:/projects/shri-shah-home-decor/public/images/services/gypsum.jpg\")",
       "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/pvc.jpg\" \"D:/projects/shri-shah-home-decor/public/images/services/pvc.jpg\")",
-      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/stickers.jpg\" \"D:/projects/shri-shah-home-decor/public/images/services/stickers.jpg\")"
+      "Bash(cp \"C:/Users/sachi/Downloads/images for shree shah home decor/services/stickers.jpg\" \"D:/projects/shri-shah-home-decor/public/images/services/stickers.jpg\")",
+      "mcp__plugin_vercel_vercel__list_teams",
+      "mcp__plugin_vercel_vercel__list_projects",
+      "Bash(git push *)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('mcpServers',{}\\), indent=2\\)\\)\")",
+      "Bash(uvx *)",
+      "Bash(curl -s -o /tmp/og-preview.png http://localhost:3000/opengraph-image)",
+      "Bash(curl -s -o \"C:/Users/sachi/AppData/Local/Temp/og-preview.png\" http://localhost:3000/opengraph-image)"
     ]
   },
   "hooks": {

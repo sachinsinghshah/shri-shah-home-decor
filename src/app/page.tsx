@@ -10,16 +10,29 @@ import GalleryPreview from '@/components/GalleryPreview'
 import CtaBanner from '@/components/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Home Decor Shop Ramnagar | PVC Panels & Wallpaper',
+  title: 'Home Decor & Interior Shop Ramnagar | PVC Panels & Wallpaper',
   description:
-    'Shri Shah Home Decor – best home decor shop in Ramnagar, Nainital. PVC panels, 3D wallpaper, false ceiling, gypsum tiles. Expert installation. Call 9548506887.',
+    'Shri Shah Home Decor – best interior & home decor shop in Ramnagar, Kashipur, Nainital, Peerumadara. PVC panels, 3D wallpaper, false ceiling, gypsum tiles. Expert installation. Call 9548506887.',
   path: '/',
   keywords: [
     'home decor shop ramnagar',
+    'interior shop ramnagar',
+    'interior ramnagar',
+    'interior kashipur',
+    'interior nainital',
+    'interior peerumadara',
     'pvc panel ramnagar',
+    'pvc panel kashipur',
     'wallpaper shop nainital',
+    'wallpaper kashipur',
+    'wallpaper ramnagar',
     'false ceiling ramnagar',
+    'false ceiling kashipur',
+    'false ceiling nainital',
     '3d wallpaper uttarakhand',
+    'home decor kashipur',
+    'home decor peerumadara',
+    'home decor nainital',
   ],
 })
 

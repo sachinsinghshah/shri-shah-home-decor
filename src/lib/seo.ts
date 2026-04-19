@@ -20,8 +20,15 @@ export function buildMetadata({
     keywords: [
       ...keywords,
       'home decor ramnagar',
+      'interior shop ramnagar',
+      'interior work ramnagar',
+      'interior shop kashipur',
       'interior shop nainital',
+      'interior shop peerumadara',
+      'home decor kashipur',
+      'home decor peerumadara',
       'shah home decor',
+      'shri shah home decor',
     ],
     alternates: { canonical: url },
     openGraph: {

@@ -1,38 +1,40 @@
-# All crawlers
+# *
 User-agent: *
 Allow: /
 
-# OpenAI GPT
+# GPTBot
 User-agent: GPTBot
 Allow: /
 
-# Google AI (Gemini, AI Overviews)
+# Google-Extended
 User-agent: Google-Extended
 Allow: /
 
-# Anthropic Claude
+# ClaudeBot
 User-agent: ClaudeBot
 Allow: /
+
+# anthropic-ai
 User-agent: anthropic-ai
 Allow: /
 
-# Perplexity AI
+# PerplexityBot
 User-agent: PerplexityBot
 Allow: /
 
-# Common Crawl (used in LLM training)
+# CCBot
 User-agent: CCBot
 Allow: /
 
-# Cohere AI
+# cohere-ai
 User-agent: cohere-ai
 Allow: /
 
-# Apple AI
+# Applebot-Extended
 User-agent: Applebot-Extended
 Allow: /
 
-# Meta AI
+# Meta-ExternalAgent
 User-agent: Meta-ExternalAgent
 Allow: /
 
